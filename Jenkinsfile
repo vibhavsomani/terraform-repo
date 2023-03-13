@@ -4,9 +4,9 @@ pipeline {
         stage('Get Input Parameter'){
             steps {
                 script {
-                    getInputParam()
-                    cloneTfModules()
-                    props = getPipelineProps()
+                    //getInputParam()
+                    //cloneTfModules()
+                    //props = getPipelineProps()
                 }
             }
         }
