@@ -67,3 +67,11 @@ def runTerraformApply(){
         terraform apply -auto-approve=true -lock=false
     '''
 }
+
+def getInputParam(){
+    properties([
+        parameters([
+            string(description: 'Enter the account number', name: 'account_number', defaultValue: '442203920185')
+        ])
+    ])
+}
