@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     //getInputParam()
-                    cloneTfModules()
+                    //cloneTfModules()
                     props = getPipelineProps()
                 }
             }
