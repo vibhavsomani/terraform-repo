@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('Get Input Parameter'){
             steps {
-                script {
-                    //getInputParam()
-                    //cloneTfModules()
-                    props = getPipelineProps()
-                }
+//                 script {
+//                     //getInputParam()
+//                     //cloneTfModules()
+//                     props = getPipelineProps()
+//                 }
             }
         }
 
