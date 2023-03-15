@@ -41,32 +41,32 @@ pipeline {
 //         }
             
 //Create Terraform init
-        stage('TerraformInit') {
-            steps{
-                script{
-                    terraformInit()
-                }
-            }
-        }
-//Create Terraform plan
-        stage('TerraformPlan'){
-            steps{
-                sh '''
-                    terraform validate
-                    terraform plan
-                '''
-            }
-        }
+//         stage('TerraformInit') {
+//             steps{
+//                 script{
+//                     terraformInit()
+//                 }
+//             }
+//         }
+// //Create Terraform plan
+//         stage('TerraformPlan'){
+//             steps{
+//                 sh '''
+//                     terraform validate
+//                     terraform plan
+//                 '''
+//             }
+//         }
 
-//Apply the Terraform configuration based on the plan after approval
-        stage('TerraformApply'){
-            steps{
-                script{
-                    runTerraformApply()
-                }
-            }
-        }
-    }
+// //Apply the Terraform configuration based on the plan after approval
+//         stage('TerraformApply'){
+//             steps{
+//                 script{
+//                     runTerraformApply()
+//                 }
+//             }
+//         }
+//     }
 }
 
 //Initialize Terraform
