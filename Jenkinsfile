@@ -32,13 +32,13 @@ pipeline {
         }
 
 //dynamically create tfvars
-        stage('Create Tfvars File'){
-            steps{
-                script{
-                    createTfvarsFile()
-                }
-            }
-        }
+//         stage('Create Tfvars File'){
+//             steps{
+//                 script{
+//                     createTfvarsFile()
+//                 }
+//             }
+//         }
             
 //Create Terraform init
         stage('TerraformInit') {
@@ -88,6 +88,10 @@ def runTerraformApply(){
     sh '''
         terraform apply -auto-approve=true -lock=false
     '''
+}
+
+def get_dynamic_inputs(){
+    env.all_vpc_name = selectValue("vpc" , region , '' , '')
 }
 
 def getInputParam(){
