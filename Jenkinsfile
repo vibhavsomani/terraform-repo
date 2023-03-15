@@ -19,7 +19,27 @@ pipeline {
             }
   
         }
+        
+//Get the dynamic inputs from Python Boto3
+        stage('Get Dynamic Inputs'){
+            steps{
+                script{
+                    timeout(time: 10, unit: 'MINUTES'){
+                        get_dynamic_inputs()
+                    }
+                }
+            }
+        }
 
+//dynamically create tfvars
+        stage('Create Tfvars File'){
+            steps{
+                script{
+                    createTfvarsFile()
+                }
+            }
+        }
+            
 //Create Terraform init
         stage('TerraformInit') {
             steps{
