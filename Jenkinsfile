@@ -13,8 +13,8 @@ pipeline {
 
         stage('Get AWS Creds') {
             steps{
-                sh 'aws configure set aws_access_key_id AKIAWN5LIK446EHCVX3C'
-                sh 'aws configure set aws_secret_access_key 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'
+                sh 'aws configure set aws_access_key_id Axxxxxx'
+                sh 'aws configure set aws_secret_access_key 1xxxxxxK'
                 sh 'aws configure set default.region us-east-1'
             }
   
